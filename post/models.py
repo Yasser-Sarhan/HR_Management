@@ -16,3 +16,8 @@ class Post(models.Model):
     email = models.EmailField(max_length=(50), null= False, blank= False, default= '....@gmail.com')
     views_count = models.IntegerField(default= 0) 
     category = models.CharField(choices= CATEGORY_CHOISES, max_length= 50, default= 'Enter Your Choice')
+
+
+
+    def __str__(self):
+        return self.title
