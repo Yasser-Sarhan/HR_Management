@@ -1,0 +1,3 @@
+{% for post in all_posts %}
+    <h4> <a href="{% url 'HR:post_details' post.id %}"> {{post}} </a></h4> 
+{% endfor %}
