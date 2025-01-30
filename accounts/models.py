@@ -13,6 +13,9 @@ class Profile (models.Model):
     address = models.CharField(max_length=100)
     phone_NO = models.CharField(max_length=13)
 
+    def __str__(self):
+        return str(self.user)
+
 
 @receiver(post_save, sender=User)
 def save_profile(sender, instance, created, **kwargs):
